@@ -98,7 +98,7 @@ ggplot(data=subset(df_disturbance, !is.na(OrganismType)), aes(x=OrganismType, fi
   labs(y = "Number of Publications", x = "Organism Type") +
   geom_text(aes(label=..count..), stat = "count", position=position_dodge(width=0.9), vjust=-0.25)
 
-##Author frequency -----
+## Author frequency -----
 
 #More simplistic model
 wordcloud(words = df_authors$Author, freq = df_authors$Frequency, min.freq = 1,
@@ -107,29 +107,3 @@ wordcloud(words = df_authors$Author, freq = df_authors$Frequency, min.freq = 1,
 
 #Newer package with more options
 wordcloud2(data = df_authors, size=0.5, color='random-dark')
-
-## Intra-Reader Analyses 
-
-# Jill's Organism Types
-
-ggplot(df_hybridswarm, aes(x=OrganismType, fill=ReadByJill, colour=ReadByJill)) + 
-  geom_bar(position="dodge") +
-  labs(y = "Number of Publications Read", x = "Organism Type") +
-  geom_text(aes(label=..count..), stat = "count", position=position_dodge(width=0.9), vjust=-0.25)
-
-# Amanda's Organism Types
-
-ggplot(df_hybridswarm, aes(x=OrganismType, fill=ReadByAmanda, colour=ReadByAmanda)) + 
-  geom_bar(position="dodge") +
-  labs(y = "Number of Publications Read", x = "Organism Type") +
-  geom_text(aes(label=..count..), stat = "count", position=position_dodge(width=0.9), vjust=-0.25)
-
-# Nathan's Organism Types
-
-ggplot(df_hybridswarm, aes(x=OrganismType, fill=ReadByNathan, colour=ReadByNathan)) + 
-  geom_bar(position="dodge") +
-  labs(y = "Number of Publications Read", x = "Organism Type") +
-  geom_text(aes(label=..count..), stat = "count", position=position_dodge(width=0.9), vjust=-0.25)
-
-#TEST TO SEE IF THIS SHOWS UP
-getwd()
