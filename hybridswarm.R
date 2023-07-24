@@ -131,5 +131,8 @@ ggplot(df_hybridswarm, aes(x=OrganismType, fill=ReadByNathan, colour=ReadByNatha
   labs(y = "Number of Publications Read", x = "Organism Type") +
   geom_text(aes(label=..count..), stat = "count", position=position_dodge(width=0.9), vjust=-0.25)
 
+<<<<<<< HEAD
 #TEST TO SEE IF THIS SHOWS UP
 getwd()
+=======
+>>>>>>> 12fa29b17b0afb422824870205acd85d42ea48a2
