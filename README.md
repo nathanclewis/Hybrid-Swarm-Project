@@ -1,2 +1,2 @@
 # Hybrid-Swarm-Project
-Line added from GitHub
+This script creates the plots for the Hybrid Swarm Paper in progress.
